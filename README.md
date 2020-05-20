@@ -12,17 +12,17 @@
 ## Prints
 
 ### Login
-![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/login.png);
+![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/login.png)
 
 ### Home
-![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/home.png);
+![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/home.png)
 
 ### Conversa aberta
-![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/chat.png);
+![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/chat.png)
 
 ### Buscando novo amigo
-![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/search.png);
+![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/search.png)
 
 ### Home com dois amigos
-![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/home2.png);
+![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/home2.png)
 
