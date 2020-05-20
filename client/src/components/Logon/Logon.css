@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(113, 89, 193);
+}
+
+.logon-content{
+    width: 400px;
+    margin: 20px auto;
+    border-radius: 5px;
+    padding: 50px 25px;
+    background-color: #eee;
+    box-shadow: 1px 1px 3px #666;
+}
+
+.logon-header{
+    color:#222;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logon-body > form{
+    display: flex;
+    flex-direction: column;
+}
+
+.logon-body > form > input, .logon-body > form > button{
+    margin-bottom: 5px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: solid 2px #ccc;
+    font-size: 15px;
+    outline: none;
+    color: #222;
+}
+
+.logon-body form > input:focus{
+    border: solid 2px rgb(113, 89, 193);
+}
+
+.logon-body > form > button{
+    color: #fff;
+    transition: ease-in-out 0.1s;
+    cursor: pointer;
+}
+
+.logon-body > form > button.clickable{
+    border: solid 1px #0ae960;
+    background-color: #0ae960;
+}
+
+.logon-body > form > button.clickable:hover{
+    box-shadow: 1px 1px 2px rgb(120, 143, 90);
+}
+
+.logon-body > form > button.unclickable{
+    border: solid 1px #666;
+    cursor: not-allowed;
+    background-color: #666;
+    opacity: 0.2;
+}
+
+.logon-body > div{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.logon-body > div > a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #666;
+}
+
+.logon-body > div > a:hover{
+    text-decoration: underline;
+}

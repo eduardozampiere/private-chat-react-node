@@ -1,0 +1,34 @@
+.searchUsers{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+}
+
+.searchUsers > form{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+}
+
+.searchUsers > form > input{
+    margin: 0px 5px 0px 5px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 10px 5px;
+    font-size: 15px;
+}
+
+.searchUsers ul{
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+}
+
+.searchUsers ul li{
+    list-style-type: none;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 15px;
+}
