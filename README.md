@@ -21,5 +21,5 @@
 ![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/search.png)
 
 ### Home com amigo adicionado
-![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/home2.png)
+![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/chat2.png)
 
