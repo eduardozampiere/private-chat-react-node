@@ -9,6 +9,10 @@
 * Alerta quando amigo entrar no chat
 * O Usuario pode ter varias conversas simultaneas
 
+
+![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/chat.gif)
+
+
 ## Prints
 
 ### Login
