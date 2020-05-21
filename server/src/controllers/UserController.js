@@ -68,7 +68,7 @@ class Controller{
 
 	async onlineFriend(obj){
 		const {_id} = obj;
-
+		if(!_id) return [];
 		let users = await User.findOne({_id}).populate('friends');
 		let friends = [];
 

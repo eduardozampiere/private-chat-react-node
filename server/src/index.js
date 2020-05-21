@@ -32,10 +32,7 @@ io.on('connection', s => {
         s.join(client.room);
         online.push(client);
         s.emit('create.room', client.id);
-        // io.emit('chat.online', 'oi');
         UserController.onlineFriend({_id: idUser}).then(r => {
-            // console.log(r);
-            // io.emit('chat.online', 'oi');
             r.forEach( f => {
                 online.forEach(o => {
                     if(o.room === f.id){
@@ -43,7 +40,6 @@ io.on('connection', s => {
                     }
                 });
             });
-            // console.log(online);
         })
 
     });
@@ -52,15 +48,11 @@ io.on('connection', s => {
         MessageController.chat(data).then(r => {
             MessageController.openChat({idUser: data.idUser, idFriend: data.idFriend}).then(c => {
                 s.emit("chat.message", c);
-                // console.log("idFriend=", data.idFriend);
                 online.forEach( el =>{
                     if(el.room === data.idFriend){
-                        // console.log('Seu amigo esta online');
                         s.to(el.room).emit("chat.message", c);
                     }
-                    // console.log(el);
                 });
-                // console.log('-------------');
             })
         });
     });
@@ -73,7 +65,13 @@ io.on('connection', s => {
 
     s.on('chat.friends', data => {
         UserController.onlineFriend(data).then(r => {
-            // console.log(r);
+            r.forEach(f => {
+                online.forEach(el => {
+                    if(el.room === f.id){
+                        f.online = true;
+                    }
+                });
+            });
             s.emit('chat.friends', r);
         })
     });
@@ -84,14 +82,31 @@ io.on('connection', s => {
     
     s.on('disconnect', () => {
         let offline = undefined;
+        let offlineId = undefined;
         for(i in online){
             const el = online[i];
             if(el.id === s.client.id){
                 offline = i;
+                offlineId = el.room;
                 break;
             }
         }
-        if(offline) online.splice(offline, 1);
+
+        if(offline){
+            online.splice(offline, 1);
+            
+            UserController.onlineFriend({_id: offlineId}).then(r => {
+                r.forEach(f => {
+                    online.forEach(el => {
+                        if(el.room === f.id){
+                            console.log('tenho amigos online');
+                            s.to(el.room).emit("chat.offline", {idUser: offlineId} );
+                        }
+                    });
+                });
+            });
+        
+        }
     });
 });
 

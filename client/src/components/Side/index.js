@@ -17,22 +17,31 @@ function Side(props) {
 	useEffect(() => {
         socketUsers.emit('chat.friends', {_id: idUser});
         socketUsers.on('chat.friends', data => {
+            console.log(data);
             setFriends(data);
         });
     }, [idUser, update]);
 
     useEffect( () => {
         socketUsers.on('chat.update', data => {
-            // socketUsers.emit('chat');
             setUpdate(new Date());
         });
 
         socketMessages.on('chat.online', data => {
-            swal.fire({
-                title: data.nameUser + " acabou de ficar online",
-                icon: 'info'
-            });
+            const li = document.getElementById(data.idUser);
+            const [t1, t2, div, t3] = li.childNodes
+            div.classList.add('online');
+            div.classList.remove('offline');
         });
+
+        socketMessages.on('chat.offline', data => {
+            const li = document.getElementById(data.idUser);
+            const [t1, t2, div, t3] = li.childNodes
+            div.classList.add('offline');
+            div.classList.remove('online');
+
+        });
+
     }, [socketUsers]);
 
 	function setFriendHandler(e, idFriend){
@@ -56,7 +65,7 @@ function Side(props) {
             <ul>
                 {
                     friends.map(f => {
-                        return <li key={f.id} id={f.id} className={(f.new) ? "newMessage" : ""} onClick={(e) => setFriendHandler(e, f.id)} >{f.name}</li>
+                        return <li key={f.id} id={f.id} className={(f.new) ? "newMessage" : ""} onClick={(e) => setFriendHandler(e, f.id)} >{f.name} <div className={(f.online ? 'online' : 'offline')}></div> </li>
                     })
                 }
             </ul>

@@ -37,6 +37,8 @@ aside > ul > li{
 	border-bottom: solid 1px #ccc;
 	padding: 8px;
 	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
 }
 
 aside > ul > li:hover{
@@ -50,4 +52,20 @@ aside > ul > li.selected{
 aside > ul > li.newMessage{
 	background-color: rgb(113, 89, 193);
 	color: #fff;
+}
+
+aside > ul > li > div{
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+aside > ul > li > div.offline{
+	background-color: red;
+}
+
+aside > ul > li > div.online{
+	background-color: green;
 }
