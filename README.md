@@ -14,15 +14,12 @@
 ### Login
 ![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/login.png)
 
-### Home
-![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/home.png)
-
 ### Conversa aberta
 ![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/chat.png)
 
 ### Buscando novo amigo
 ![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/search.png)
 
-### Home com dois amigos
+### Home com amigo adicionado
 ![](https://github.com/eduardozampiere/private-chat-react-node/blob/master/prints/home2.png)
 
