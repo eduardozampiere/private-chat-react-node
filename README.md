@@ -6,7 +6,7 @@
 ## Features
 * Chats privados
 * Adicionar amigos
-* Alerta quando amigo entrar no chat
+* Mostrar usuarios online
 * O Usuario pode ter varias conversas simultaneas
 
 
